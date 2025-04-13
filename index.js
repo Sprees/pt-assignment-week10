@@ -121,6 +121,8 @@ function formatName(name) {
 }
 
 function isValidNumber(phoneNumber) {
+    // remove anything that isn't an integer 
+    phoneNumber = phoneNumber.replace(/\D/g, '')
     // not sure on this logic, but is concise 
     const pattern = /^(\+?\d{1,4})?[-. (]*\d{3}[-. )]*(\d{3}[-. ]*\d{4})$/
     // if number is not standard 10 digits return false, otherwise return the regex test
